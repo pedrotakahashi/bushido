@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', 'ControllerSite@PageIndex');
+
+
+Route::get('/login', 'ControllerSite@PageLogin');
