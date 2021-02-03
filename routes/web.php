@@ -15,4 +15,9 @@
 Route::get('/', 'ControllerSite@PageIndex');
 
 
-Route::get('/login', 'ControllerSite@PageLogin');
+// Route::get('/login', 'ControllerSite@PageLogin');
+// Route::post('/login-dados', 'ControllerSite@PageLogin');
+// Route::post('/login', 'UserController@create');
+// Route::post('/login', 'UserController@store');
+
+Route::resource('/login', 'UserController');
