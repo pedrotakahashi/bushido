@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,13 +13,14 @@
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/', 'ControllerSite@PageIndex');
+Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('home');
 
-// Route::get('/login', 'ControllerSite@PageLogin');
-// Route::post('/login-dados', 'ControllerSite@PageLogin');
-// Route::post('/login', 'UserController@create');
-// Route::post('/login', 'UserController@store');
+Auth::routes();
 
-Route::resource('/login', 'UserController');
+Route::get('/home', 'HomeController@index')->name('home');
