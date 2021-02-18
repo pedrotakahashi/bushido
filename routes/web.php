@@ -14,24 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('welcome');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-Route::get('/', 'ControllerSite@PageIndex');
-
-
-Route::get('/login', 'ControllerSite@PageLogin');
-Route::post('/login-dados', 'ControllerSite@PageLogin');
-Route::post('/login', 'UserController@create');
-Route::post('/login', 'UserController@store');
-
-Route::resource('/login', 'UserController');
