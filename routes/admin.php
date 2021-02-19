@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Route;
         // // ### AnalyticsController ### 
         // Route::resource('analytics','AnalyticsController');
 
-        // // ### BannerController ###
-        // Route::resource('banner', 'BannerController');
+        ###SenseisController ###
+        Route::resource('senseis', 'SenseisController');
         
         //  // ### BlogController ###
         //  Route::get('blog-category', 'BlogController@indexBlogCategory')->name('blogcategory.index');

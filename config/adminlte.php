@@ -234,16 +234,16 @@ return [
             'text'        => 'Dashboard',
             'url'         => 'admin/',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            // 'label'       => 4,
+            // 'label_color' => 'success',
         ],
-        ['header' => 'Configuração'],
+        ['header' => 'Painel de Controle'],
         [
             'text' => 'Controle de Professores',
             'icon' => 'fas fa-fw fa-user',
             'submenu' =>[
                 ['text' => 'Listar Cadastros',
-                'url' => '#'],
+                'url' => 'admin/senseis'],
 
                 ['text' => 'Cadastrar Professores',
                 'url' => '#']
