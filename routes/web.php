@@ -2,6 +2,7 @@
 
 
 use Illuminate\Support\Facades\Route;
+use phpDocumentor\Reflection\Types\Resource_;
 
 include('admin.php');
 /*
@@ -15,10 +16,28 @@ include('admin.php');
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
 Route::get('/admin', 'HomeController@index');
+
+
+####################### Alunos Controller ##################
+
+Route::resource('alunos', 'Site\AlunosController',
+    [
+        'names' =>[
+            'index' =>'alunos',
+            'create' =>'cad-alunos'
+        ]
+    ]
+
+
+);
+
+
+####################### Site Controller ##################
+Route::get('/', 'Site\SiteController@index');

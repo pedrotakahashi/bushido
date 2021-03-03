@@ -1,4 +1,5 @@
-@extends('adminlte::page')
+@extends('Template.template-base')
+
 
 @section('title', 'Cadastro de Alunos')
 
@@ -86,7 +87,7 @@
 
 <div class="box-footer">
     <button type="submit" class="btn btn-primary">Salvar</button>
-    <a href="{{route('#')}}" class="btn btn-dark">Voltar</a>
+    <a href="#" class="btn btn-dark">Voltar</a>
 </div>
 
 </form>
