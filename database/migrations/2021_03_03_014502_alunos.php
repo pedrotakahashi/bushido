@@ -14,8 +14,10 @@ class Alunos extends Migration
     public function up()
     {
         Schema::create('alunos', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table ->string('nome')->unique();
+            $table->increments('id');
+            $table ->string('nome', 55)->unique();
+            $table ->string('email')->unique();
+            
             $table->string('graduacao');
             $table->date('data-nascimento');
             $table->string('cpf',11)->unique();

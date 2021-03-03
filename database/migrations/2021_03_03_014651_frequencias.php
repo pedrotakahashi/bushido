@@ -14,12 +14,12 @@ class Frequencias extends Migration
     public function up()
     {
         Schema::create('frequencias', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->integer('faltas');
             $table->text('aluno');
             $table->timestamps();
 
-            $table->foreign('aluno')->references('id')->on('alunos');
+
         });
     }
 

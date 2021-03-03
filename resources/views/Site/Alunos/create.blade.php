@@ -15,6 +15,7 @@
 
 <form enctype="multipart/form-data" role="form" method="post" action="#">
   @csrf
+  <div class="container">
 <div class="row">
   <div class="col-md-6">
     <div class="box box-danger">
@@ -24,14 +25,15 @@
        
         <div class="box-body">
           <div class="form-group">
-            <label>Nome</label>
-            <input class="form-control" id="req-nome" placeholder="Inserir Nome" type="text" name="nome"/>
+            <label>E-mail</label>
+            <input class="form-control col-6" id="req-nome" placeholder="Inserir Nome" type="text" name="nome"/>
           </div>
-          <div class="form-group">
-            <label>Email</label>
-            <input class="form-control" id="req-email" name="email" placeholder="email@email.com" type="email"/>
-          </div>
-        </div>
+
+          <div class="col-6">
+      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+    </div>
+       
+        </div>    
     </div>
   </div>
   <!-- coluna direita -->
@@ -42,9 +44,27 @@
         <h3 class="box-title">Dados Cadastrais</h3>
       </div>
       <div class="box-body">
+      <div class="form-group">
+            <label>Nome</label>
+            <input class="form-control col-6" id="req-nome" placeholder="Inserir Nome" type="text" name="nome"/>
+          </div>
         <div class="form-group">
           <label>CPF</label>
           <input class="form-control" type="text" name="cpf"/>
+        </div>
+        <div class="form-group">
+            <label>Graduação</label>
+            <select class="form-control  col-4" name="graduacao" >
+                <option>Faixa branca</option>
+                <option>Faixa cinza</option>
+                <option>Faixa Azul</option>
+                <option>Faixa Amarela</option>
+                <option>Faixa Laranja</option>
+                <option>Faixa Verde</option>
+                <option>Faixa Roxa</option>
+                <option>Faixa Marrom</option>
+                <option>Faixa Preta</option>
+            </select>
         </div>
         <div class="form-group">
           <label for="biography">Data de nascimento</label>
@@ -89,7 +109,7 @@
     <button type="submit" class="btn btn-primary">Salvar</button>
     <a href="#" class="btn btn-dark">Voltar</a>
 </div>
-
+</div>
 </form>
 
 @stop
