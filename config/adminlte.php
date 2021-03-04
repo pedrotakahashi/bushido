@@ -256,7 +256,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Listar Alunos',
-                    'url' => '#'
+                    'url' => 'admin/alunos'
                 ],
              
                 [

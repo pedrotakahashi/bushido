@@ -8,6 +8,14 @@ use Illuminate\Support\Facades\Route;
         // // ### AnalyticsController ### 
         // Route::resource('analytics','AnalyticsController');
 
+
+        Route::resource('alunos', 'AlunosController',[
+        'names' => [
+            'edit'=>'editAluno'
+            // etc...
+        ]
+        ]);
+
         ###SenseisController ###
         Route::resource('senseis', 'SenseisController');
         

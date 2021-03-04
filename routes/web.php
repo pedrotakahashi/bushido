@@ -26,18 +26,13 @@ Route::get('/admin', 'HomeController@index');
 
 
 ####################### Alunos Controller ##################
-
-Route::resource('alunos', 'Site\AlunosController',
-    [
-        'names' =>[
-            'index' =>'alunos',
-            'create' =>'cad-alunos'
-        ]
-    ]
+Route::resource('alunos', 'Site\AlunoController');
 
 
-);
 
 
 ####################### Site Controller ##################
-Route::get('/', 'Site\SiteController@index');
+Route::get('/', 'Site\SiteController@index')->name('home');
+Route::get('/aulas','Site\SiteController@aulas')->name('aulas');
+Route::get('/contato','Site\SiteController@contato')->name('contato');
+Route::get('/sobre-nos','Site\SiteController@sobre')->name('sobrenos');

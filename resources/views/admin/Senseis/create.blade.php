@@ -1,11 +1,8 @@
 @extends('adminlte::page')
-
 @section('title', 'Senseis')
-
 @section('content_header')<div class="container-fluid">
     <div class="col-md-12">
     <h1>Cadastrar Sensei</h1>
-
 @stop
 
 @section('content')
@@ -92,77 +89,3 @@
 </form>
 
 @stop
-<!--  @section('js')
-<script type="text/javascript">
-
-jQuery.noConflict();
-function kclick(){
-  jQuery('ul.dropdown-email li').on('click',function(){
-      // alert(jQuery(this).html());
-      // console.log($input.innerHTML);
-      var CSRF_TOKEN = jQuery('meta[name="csrf-token"]').attr('content');
-      jQuery.ajaxSetup({
-          headers: { 'X-CSRF-TOKEN': CSRF_TOKEN }
-      });
-
-      jQuery.ajax({
-        type:"GET",
-        url:"/admin/user/buscaUser",
-        data: 'email='+jQuery(this).html(),
-        dataType: 'JSON',
-        async: false,
-        cache: false,
-        timeout: 30000,
-        success: function(data) {
-          console.log(data[0]);
-          jQuery('#req-nome').val(data[0].name);
-          jQuery('#req-email').val(data[0].email);
-          jQuery('#req-telefone').val(data[0].celular);
-        },
-      });
-
-      jQuery('ul.dropdown-email').toggle();
-  });
-}
-
-jQuery(document).ready(function(){
-  jQuery('#req-email').on("keyup", function(){
-    //console.log(jQuery(this).val());
-
-    if(jQuery('#req-email').val().length > 3){
-        jQuery('ul.dropdown-email').toggle();
-        //console.log("buscaUser ajax");
-        var CSRF_TOKEN = jQuery('meta[name="csrf-token"]').attr('content');
-        jQuery.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': CSRF_TOKEN
-            }
-        });
-
-        jQuery.ajax({
-          type:"GET",
-          url:"/admin/user/buscaUser",
-          data: 'email='+jQuery('#req-email').val(),
-          dataType: 'JSON',
-          async: false,
-          cache: false,
-          timeout: 30000,
-          success: function(data) {
-            //console.log(data);
-            $html =  '';
-            jQuery(data).each(function(key, li){
-              $html += "<li>"+li.email+"</li>";
-              //console.log(key + li.name);
-            });
-            jQuery('ul.dropdown-email').html($html);
-            kclick();
-          },
-        });
-
-    }
-  });
-
-});
-
-</script>
-@stop  -->

@@ -16,16 +16,16 @@ class Alunos extends Migration
         Schema::create('alunos', function (Blueprint $table) {
             $table->increments('id');
             $table ->string('nome', 55)->unique();
+            $table ->string('sobrenome', 55)->nullable();
             $table ->string('email')->unique();
-            
-            $table->string('graduacao');
-            $table->date('data-nascimento');
-            $table->string('cpf',11)->unique();
+            $table ->string('senha')->unique();
+            $table->string('graduacao')->nullable();;
+            $table->date('data-nascimento')->nullable();;
+            $table->string('cpf',15)->unique();
             $table->string('rua')->nullable();
+            $table->string('bairro')->nullable();
             $table->string('cep')->nullable();
-            $table->string('num-casa')->nullable();
             $table->string('cidade')->nullable();
-            $table->string('estado',2)->nullable();
             $table->string('nomeDaMae')->nullable();
             $table->string('nomeDoPai')->nullable();
             $table->string('telefone')->nullable();

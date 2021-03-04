@@ -26,13 +26,13 @@
                             <div class="collapse navbar-collapse " id="conteudoNavbarSuportado">
                                 <ul class="navbar-nav mr-auto">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#">BUSHIDO <span class="sr-only">(página atual)</span></a>
+                                    <a class="nav-link" href="{{route('home')}}">BUSHIDO <span class="sr-only">(página atual)</span></a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="#">AULAS <span class="sr-only">(página atual)</span></a>
+                                    <a class="nav-link" href="{{route('aulas')}}">AULAS <span class="sr-only">(página atual)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">SOBRE NOS</a>
+                                    <a class="nav-link" href="{{route('sobrenos')}}">SOBRE NOS</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
@@ -44,12 +44,17 @@
                                     <a class="dropdown-item" href="#">UNESP</a>
                                     <a class="dropdown-item" href="#">UNOESTE</a>
                                     </li>
+
+                                    <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    CADASTRAR ALUNO</a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('alunos.create') }}">CADASTRO</a>
+                                    </li>
+                               
                                 <li class="nav-item">
-                                
-                                    <a class="nav-link" href="{{ route('cad-alunos') }}">LOGIN</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">CONTATO</a>
+                                    <a class="nav-link" href="{{route('contato')}}">CONTATO</a>
                                 </li>
                                 </ul>
                               
